@@ -1,24 +1,22 @@
-# README
+# ppp
+Perr to Peer by projectP のAPI
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### POST /api/token
+token投げればペアになったtokenを返してくれます。<br>
 
-Things you may want to cover:
+```json
+{
+	"user":
+		{
+			"id":"userId",
+			"token":"SkyWayToken",
+			"lesson":"lessonId"
+		}
+}
+```
+みたいなJsonを期待してます。<br>
+例：<br>
+curl http://localhost:3000/api/token -X POST -H "Content-Type: application/json" -d '{"user":{"id":1,"token":"SKYWAYTOKEN","lesson":2}}'
 
-* Ruby version
 
-* System dependencies
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
