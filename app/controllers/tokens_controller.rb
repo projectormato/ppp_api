@@ -21,7 +21,7 @@ class TokensController < ApplicationController
     end
     $tokens.push(token) # 自身を加える
   end
-  result = {"tokens" => output} 
+  result = {"result" => output}
   p $tokens
   render json: result
   end
