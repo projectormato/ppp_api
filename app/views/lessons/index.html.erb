@@ -1,8 +1,13 @@
 <h1>Lessons</h1>
 <p>現在受けられるレッスンの一覧です。</p>
 
-<ul>
-    <% @lessons.each do |lesson| %>
-        <li><%= link_to lesson.name, "lessons/#{lesson.id}"%></li>
-    <% end %>
-</ul>
+<% @lessons.each do |lesson| %>
+    <div class="card" style="margin-bottom: 10px">
+        <div class="card-body">
+            <h6 class="card-subtitle mb-2 text-muted">Lv.<%= lesson.level %></h6>
+            <h4 class="card-title"><%= lesson.name %></h4>
+            <p class="card-text"><%= lesson.description %></p>
+            <%= link_to '詳細',"lessons/#{lesson.id}", class: 'card-link' %>
+        </div>
+    </div>
+<% end %>
