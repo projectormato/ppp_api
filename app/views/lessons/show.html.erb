@@ -1,0 +1,9 @@
+<h2><%= @lesson.name %></h2>
+<div class ="lesson">
+  <div class="discription">
+    <h3>このレッスンの説明</h3>
+    <p><%= @lesson.description %>
+  </div>
+  <a href="#"><button type="button" class="btn btn-primary">このレッスンを受講する</button></a>
+</div>
+<%= link_to 'レッスン選択画面に戻る', root_path %>
